@@ -6,13 +6,17 @@
     <title>Digital Horror Lab | かのん</title>
     <style>
         body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
             height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .background {
-            background-image: url('https://example.com/your-background-image.jpg');
+            background-image: url('path/to/your-background-image.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -25,11 +29,9 @@
             color: white;
             padding: 2rem;
             border-radius: 10px;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;    
         }
         .profile-img {
             width: 128px;
@@ -67,10 +69,10 @@
 </head>
 <body>
     <div class="background">
-        <div class="container">
+        <div class="content">
             <h1>Digital Horror Lab | かのん</h1>
             <p>AI×ホラー×サイバーパンクの探究者</p>
-            <img src="https://example.com/your-profile-image.jpg" alt="かのん" class="profile-img">
+            <img src="path/to/your-profile-image.jpg" alt="かのん" class="profile-img">
             <p>noteの更新を動画でお届け。ホラー映画レビュー、AI関連コンテンツ、サイバーパンクと日常を融合した小説を創作中。</p>
             <p><em>"From the Digital Shadows, Terror Evolves"</em></p>
             <a href="https://note.com/kanon_oboroyume" class="link-button">📝 note</a>
@@ -84,7 +86,7 @@
             </footer>
         </div>
     </div>
-    <script>
+    <body>
         function createStars() {
             const container = document.querySelector('.container');
             for (let i = 0; i < 50; i++) {

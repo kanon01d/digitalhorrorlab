@@ -8,50 +8,53 @@
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
         }
         .background {
-            background-image: url('C:\Users\lftbh\Downloads\23.png');
+            background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
-        .container {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 2rem;
             border-radius: 10px;
-            width: 90%;
+            text-align: center;
             max-width: 600px;
-            margin: auto;    
+            width: 90%;
+            z-index: 1;
         }
         .profile-img {
-            width: 128px;
-            height: 128px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 2px solid #8B5CF6;
+            border: 3px solid #8B5CF6;
             margin-bottom: 1rem;
         }
         .link-button {
-            display: block;
-            background-color: rgba(139, 92, 246, 0.5);
+            display: inline-block;
+            background-color: rgba(139, 92, 246, 0.7);
             color: white;
-            padding: 0.75rem;
-            margin: 0.75rem 0;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
         }
         .link-button:hover {
-            background-color: rgba(139, 92, 246, 0.7);
+            background-color: rgba(124, 58, 237, 0.9);
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
         .star {
             position: absolute;
@@ -72,23 +75,26 @@
         <div class="content">
             <h1>Digital Horror Lab | かのん</h1>
             <p>AI×ホラー×サイバーパンクの探究者</p>
-            <img src="C:\Users\lftbh\Downloads\kanon_files\%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%20(1920%20x%201080%20px)%20(1080%20x%201920%20px)-enhanced.png" alt="かのん" class="profile-img">
-            <p>noteの更新を動画でお届け。ホラー映画レビュー、AI関連コンテンツ、サイバーパンクと日常を融合した小説を創作中。</p>
+            <img src="images/profile.jpg" alt="かのん" class="profile-img">
+            <p>noteの更新を動画でお届け。ホラー映画レビュー、AI関連コンテンツ、サイバーパンクと日本の日常を融合した小説を創作中。</p>
             <p><em>"From the Digital Shadows, Terror Evolves"</em></p>
-            <a href="https://note.com/kanon_oboroyume" class="link-button">📝 note</a>
-            <a href="https://x.com/mistydream01" class="link-button">🐦 X (Twitter)</a>
-            <a href="https://www.youtube.com/@DigitalHorrorLab_kanon" class="link-button">🎥 YouTube</a>
-            <a href="https://www.instagram.com/digitalhorrorlab/" class="link-button">📸 Instagram</a>
+            <div>
+                <a href="https://note.com/kanon_oboroyume" class="link-button">📝 note</a>
+                <a href="https://x.com/mistydream01" class="link-button">🐦 X (Twitter)</a>
+                <a href="https://www.youtube.com/@DigitalHorrorLab_kanon" class="link-button">🎥 YouTube</a>
+                <a href="https://www.instagram.com/digitalhorrorlab/" class="link-button">📸 Instagram</a>
+            </div>
             <p>📚 文芸叢書CAL主催吸血鬼アンソロジー小説編集参加</p>
             <p>🆕 Amazonにて近日発売</p>
             <footer>
-                <small>© 2024 かのん（朧夢謌音） |© pikulabo</small>
+                <small>© 2024 かのん（朧夢謌音） | © pikulabo </small>
             </footer>
         </div>
     </div>
-    <body>
+
+    <script>
         function createStars() {
-            const container = document.querySelector('.container');
+            const container = document.querySelector('.background');
             for (let i = 0; i < 50; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');

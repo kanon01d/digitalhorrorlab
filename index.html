@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horror Lab | かのん</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .background {
+            background-image: url('https://example.com/your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 2px solid #8B5CF6;
+            margin-bottom: 1rem;
+        }
+        .link-button {
+            display: block;
+            background-color: rgba(139, 92, 246, 0.5);
+            color: white;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: rgba(139, 92, 246, 0.7);
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Digital Horror Lab | かのん</h1>
+            <p>AI×ホラー×サイバーパンクの探究者</p>
+            <img src="https://example.com/your-profile-image.jpg" alt="かのん" class="profile-img">
+            <p>noteの更新を動画でお届け。ホラー映画レビュー、AI関連コンテンツ、サイバーパンクと日常を融合した小説を創作中。</p>
+            <p><em>"From the Digital Shadows, Terror Evolves"</em></p>
+            <a href="https://note.com/kanon_oboroyume" class="link-button">📝 note</a>
+            <a href="https://x.com/mistydream01" class="link-button">🐦 X (Twitter)</a>
+            <a href="https://www.youtube.com/@DigitalHorrorLab_kanon" class="link-button">🎥 YouTube</a>
+            <a href="https://www.instagram.com/digitalhorrorlab/" class="link-button">📸 Instagram</a>
+            <p>📚 文芸叢書CAL主催吸血鬼アンソロジー小説編集参加</p>
+            <p>🆕 Amazonにて近日発売</p>
+            <footer>
+                <small>© 2024 かのん（朧夢謌音） |© pikulabo</small>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function createStars() {
+            const container = document.querySelector('.container');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animation = `twinkle ${Math.random() * 4 + 2}s infinite`;
+                container.appendChild(star);
+            }
+        }
+        createStars();
+    </script>
+</body>
+</html>
